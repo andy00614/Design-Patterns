@@ -31,6 +31,8 @@ function create(fn) {
 }
 const observer = create((observer:MiddleFn) => {
   setTimeout(() => {
+    // todo: console会报undefined，现在理解的应该是不执行啊
+    // console.log(observer.next(1))
     observer.next(1)
   }, 1000);
   observer.next(2)
